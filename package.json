@@ -11,6 +11,8 @@
     "@oclif/command": "^1.5.16",
     "@oclif/config": "^1.13.2",
     "@oclif/plugin-help": "^2.2.0",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.8.16",
     "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.3",
     "ora": "^3.4.0",
