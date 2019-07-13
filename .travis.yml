@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "8.14"
+
+before_deploy: "npm i -g typescript"
+
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
