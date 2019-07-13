@@ -1,0 +1,57 @@
+{
+  "name": "home-seek",
+  "description": "This app is used to poll and alert if a new Home appears in daft.",
+  "version": "0.0.0",
+  "author": " @flaviojmendes",
+  "bin": {
+    "home-seek": "./bin/run"
+  },
+  "bugs": "https://github.com/flaviojmendes/home-seek/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.16",
+    "@oclif/config": "^1.13.2",
+    "@oclif/plugin-help": "^2.2.0",
+    "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.3",
+    "ora": "^3.4.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@oclif/test": "^1.2.4",
+    "@oclif/tslint": "^3.1.1",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^10.12.19",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.3.0",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/flaviojmendes/home-seek",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "home-seek"
+  },
+  "repository": "flaviojmendes/home-seek",
+  "scripts": {
+    "posttest": "tslint -p test -t stylish",
+    "prepack": "rm -rf lib && tsc -b",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\""
+  },
+  "types": "lib/index.d.ts"
+}
