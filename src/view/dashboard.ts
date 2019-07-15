@@ -1,4 +1,4 @@
-import {DaftHome} from "../model/daft-home.model";
+import {DaftHome, DaftHomes} from "../model/daft-home.model";
 var blessed = require('blessed')
 var contrib = require('blessed-contrib')
 const open = require('open');
@@ -8,21 +8,25 @@ export class Dashboard {
   screen = blessed.screen()
   grid = new contrib.grid({rows:12, cols: 12, screen: this.screen})
   table:any = this.grid.set(0, 0, 6, 12, blessed.ListTable, this.createListTable("left", 0, true));
-  markdownLatest = this.grid.set(6, 3, 3, 9, contrib.markdown)
-  markdownSummary = this.grid.set(6,0,3,3, contrib.markdown)
+  markdownSummary = this.grid.set(6,0,3,12, contrib.markdown)
+  markdownLatest = this.grid.set(9, 0, 3, 12, contrib.markdown)
 
-  render(homes: DaftHome[]) {
+  render(daftHomes: DaftHomes) {
     let screen = this.screen;
     let table = this.table;
     //allow control the table with the keyboard
     table.focus()
+
+    let homes: DaftHome[] = daftHomes.homes;
+
     this.generateTable(homes,table)
 
 
 
     // Summary
     let markdownSummary = this.markdownSummary
-    markdownSummary.setMarkdown('# Last Update \n '+ new Date().toLocaleString()
+    markdownSummary.setMarkdown('Description \n ' + daftHomes.description + '\n'
+      + '# Last Update \n '+ new Date().toLocaleString()
      + '\n\n# Total Found \n ' + homes.length)
 
     // Latest Found

@@ -1,6 +1,4 @@
-import chalk from "chalk";
-import ora = require("ora");
-import {DaftHome} from "../model/daft-home.model";
+import {DaftHome, DaftHomes} from "../model/daft-home.model";
 
 const rp = require('request-promise')
 const $ = require('cheerio')
@@ -24,8 +22,16 @@ export class DaftService {
       offset = homes.length;
     }
 
+    let html = await rp(searchUrl+ '&offset=0')
+    let description = await $('#search_sentence > h1', html).text().trim().replace(/ +(?= )/g, '');
 
-    return homes
+    let daftHomes: DaftHomes = {
+      description: description,
+      homes: homes
+    }
+
+
+    return daftHomes
   }
 
   private async getHomesByOffset(searchUrl: string, offset:number) {

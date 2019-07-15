@@ -5,3 +5,10 @@ export interface DaftHome {
   url: string;
 
 }
+
+export interface DaftHomes {
+
+  description: string;
+  homes: DaftHome[];
+
+}
