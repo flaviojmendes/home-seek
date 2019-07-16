@@ -1,7 +1,7 @@
 import {DaftHome, DaftHomes} from "../model/daft-home.model";
 var blessed = require('blessed')
 var contrib = require('blessed-contrib')
-const open = require('open');
+const openurl = require('openurl');
 
 export class Dashboard {
 
@@ -9,7 +9,17 @@ export class Dashboard {
   grid = new contrib.grid({rows:12, cols: 12, screen: this.screen})
   table:any = this.grid.set(0, 0, 6, 12, blessed.ListTable, this.createListTable("left", 0, true));
   markdownSummary = this.grid.set(6,0,3,12, contrib.markdown)
-  markdownLatest = this.grid.set(9, 0, 3, 12, contrib.markdown)
+  markdownLatest = this.grid.set(9, 0, 3, 9, contrib.markdown)
+  donutNextUpdate = this.grid.set(9,9,3,3, contrib.donut,{
+    label: 'Refresh Rate',
+    radius: 12,
+    arcWidth: 4,
+    remainColor: 'black',
+    yPadding: 0
+
+  })
+
+
 
   render(daftHomes: DaftHomes) {
     let screen = this.screen;
@@ -37,18 +47,17 @@ export class Dashboard {
      + latest.url)
 
 
+    let donutNextUpdate = this.donutNextUpdate;
+
     screen.key(['escape', 'q', 'C-c'], function(ch:any, key:any) {
       return process.exit(0);
     });
 
     // Open article
     screen.key(["enter"], () => {
-      let selected = homes[table.selected - 1];
-      markdownLatest.setMarkdown('# Latest Found \n '
-        + '`' +  selected.price+ '`' + ' - ' + selected.title  + '\n '
-        + selected.url)
-      screen.render();
-      open(selected.url);
+      let itemToShow = table.selected == 1 ? 0 : table.selected - 2;
+      let selected = homes[itemToShow];
+      openurl.open(selected.url)
     });
 
     screen.key(["up"], () => {
@@ -73,6 +82,7 @@ export class Dashboard {
       table.emit('attach');
       markdownLatest.emit('attach');
       markdownSummary.emit('attach');
+      donutNextUpdate.emit('attach');
 
     });
 
@@ -124,6 +134,14 @@ export class Dashboard {
     })
 
     table.setData(data)
+  }
+
+  updateDonut(time: number, percent: number) {
+    const label = 'Next update in ' + time + 's';
+    this.donutNextUpdate.setData([
+      {percent: percent, label: label, color: 'cyan'}
+    ])
+    this.screen.render();
   }
 
 }

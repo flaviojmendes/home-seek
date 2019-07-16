@@ -1,5 +1,5 @@
 export interface DaftHome {
-
+  id: string;
   title: string;
   price: string;
   url: string;

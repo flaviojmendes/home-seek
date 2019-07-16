@@ -32,6 +32,7 @@ class HomeSeek extends Command {
     const url = flags.url || '';
     const refreshTime = flags.refresh || 1;
 
+    const timeInSeconds = Number(refreshTime) * 60;
 
     let dashboard = new Dashboard();
     let prevHomes:DaftHomes = {description: 'none', homes: []};
@@ -40,7 +41,12 @@ class HomeSeek extends Command {
       NotificationService.notifyNewHome(homes, prevHomes);
       homes = await daftService.getHomes(url);
       dashboard.render(homes);
-      await this.sleep(Number(refreshTime) * 60000);
+
+      for(let i=timeInSeconds; i > 0 ; i--) {
+        dashboard.updateDonut(i, i/timeInSeconds);
+        await this.sleep(1000);
+      }
+
       prevHomes = homes;
     }
 

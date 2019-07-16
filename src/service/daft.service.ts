@@ -49,7 +49,7 @@ export class DaftService {
         let title = $('div.search_result_title_box > h2 > a', child).text().trim().replace(/ +(?= )/g, '');
         let url = this.BASE_URL + $('div.search_result_title_box > h2 > a', child).attr('href');
         let price = $('div.text-block > div.info-box > strong', child).text().trim().split(' ')[0];
-        let home: DaftHome = {title: title, price: price, url: url};
+        let home: DaftHome = {id: Buffer.from(title).toString('base64'), title: title, price: price, url: url};
         homesByOffset.push(home);
       }
     });
