@@ -18,8 +18,16 @@ export class Dashboard {
     yPadding: 0
 
   })
+  homes:DaftHome[] = []
 
-
+  constructor() {
+    // Open article
+    this.screen.key(["enter"], () => {
+      let itemToShow = this.table.selected == 1 ? 0 : this.table.selected - 2;
+      let selected = this.homes[itemToShow];
+      openurl.open(selected.url)
+    });
+  }
 
   render(daftHomes: DaftHomes) {
     let screen = this.screen;
@@ -27,9 +35,9 @@ export class Dashboard {
     //allow control the table with the keyboard
     table.focus()
 
-    let homes: DaftHome[] = daftHomes.homes;
+    this.homes = daftHomes.homes;
 
-    this.generateTable(homes,table)
+    this.generateTable()
 
 
 
@@ -37,11 +45,11 @@ export class Dashboard {
     let markdownSummary = this.markdownSummary
     markdownSummary.setMarkdown('Description \n ' + daftHomes.description + '\n'
       + '# Last Update \n '+ new Date().toLocaleString()
-     + '\n\n# Total Found \n ' + homes.length)
+     + '\n\n# Total Found \n ' + this.homes.length)
 
     // Latest Found
     let markdownLatest = this.markdownLatest;
-    let latest = homes[0];
+    let latest = this.homes[0];
     markdownLatest.setMarkdown('# Latest Found \n '
       + '`' +  latest.price+ '`' + ' - ' + latest.title  + '\n '
      + latest.url)
@@ -53,16 +61,11 @@ export class Dashboard {
       return process.exit(0);
     });
 
-    // Open article
-    screen.key(["enter"], () => {
-      let itemToShow = table.selected == 1 ? 0 : table.selected - 2;
-      let selected = homes[itemToShow];
-      openurl.open(selected.url)
-    });
+
 
     screen.key(["up"], () => {
       let itemToShow = table.selected == 1 ? 0 : table.selected - 2;
-      let selected = homes[itemToShow];
+      let selected = this.homes[itemToShow];
       markdownLatest.setMarkdown('# Selected \n '
         + '`' +  selected.price+ '`' + ' - ' + selected.title  + '\n '
         + selected.url)
@@ -70,8 +73,8 @@ export class Dashboard {
     });
 
     screen.key(["down"], () => {
-      let itemToShow = table.selected == homes.length ? homes.length - 1 : table.selected;
-      let selected = homes[itemToShow];
+      let itemToShow = table.selected == this.homes.length ? this.homes.length - 1 : table.selected;
+      let selected = this.homes[itemToShow];
       markdownLatest.setMarkdown('# Selected \n '
         + '`' +  selected.price+ '`' + ' - ' + selected.title  + '\n '
         + selected.url)
@@ -88,6 +91,8 @@ export class Dashboard {
 
     screen.render()
   }
+
+
 
   createListTable(alignment:string, padding:number = 0, isInteractive:boolean = false) {
     return {
@@ -122,10 +127,10 @@ export class Dashboard {
    * Populates the Results Table
    * @param homes
    */
-  generateTable(homes: DaftHome[], table:any) {
+  generateTable() {
     var data:any = [['Title', 'Price', 'URL']]
 
-    homes.forEach(home => {
+    this.homes.forEach(home => {
       var row = []
       row.push(home.title.substr(0,79))
       row.push(home.price)
@@ -133,7 +138,7 @@ export class Dashboard {
       data.push(row)
     })
 
-    table.setData(data)
+    this.table.setData(data)
   }
 
   updateDonut(time: number, percent: number) {
