@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2a7cad23-3fd3-413d-9699-1f5f54603266" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/notification.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/notification.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/dashboard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/dashboard.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,7 +30,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="8" />
+          <entry key="js" value="10" />
           <entry key="json" value="8" />
           <entry key="log" value="1" />
           <entry key="md" value="1" />
@@ -39,7 +42,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="9" />
+          <entry key="JavaScript" value="11" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="18" />
           <entry key="YAML" value="1" />
@@ -57,7 +60,7 @@
           <entry key="js" value="154" />
           <entry key="json" value="49" />
           <entry key="md" value="1" />
-          <entry key="ts" value="5410" />
+          <entry key="ts" value="6307" />
           <entry key="yml" value="52" />
         </counts>
       </usages-collector>
@@ -66,7 +69,7 @@
           <entry key="JSON" value="49" />
           <entry key="JavaScript" value="154" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="TypeScript" value="5410" />
+          <entry key="TypeScript" value="6307" />
           <entry key="YAML" value="52" />
         </counts>
       </usages-collector>
@@ -77,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="53">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -89,7 +92,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/daft.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-379">
+            <state relative-caret-position="-158">
               <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
             </state>
           </provider>
@@ -98,22 +101,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/notification.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="288">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/open/index.d.ts">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="104">
+              <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -127,12 +125,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/dashboard.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+            <state relative-caret-position="217">
+              <caret line="156" column="53" selection-start-line="156" selection-start-column="53" selection-end-line="156" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/blessed/lib/widgets/bigtext.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-427" />
           </provider>
         </entry>
       </file>
@@ -165,6 +173,9 @@
       <find>selected</find>
       <find>latest</find>
       <find>build</find>
+      <find>enter</find>
+      <find>notifi</find>
+      <find>donu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,10 +190,10 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/model/daft-home.model.ts" />
         <option value="$PROJECT_DIR$/src/service/daft.service.ts" />
-        <option value="$PROJECT_DIR$/src/index.ts" />
-        <option value="$PROJECT_DIR$/src/service/notification.service.ts" />
-        <option value="$PROJECT_DIR$/src/view/dashboard.ts" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/service/notification.service.ts" />
+        <option value="$PROJECT_DIR$/src/index.ts" />
+        <option value="$PROJECT_DIR$/src/view/dashboard.ts" />
       </list>
     </option>
   </component>
@@ -202,7 +213,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="819" />
@@ -220,6 +231,32 @@
             <path>
               <item name="home-seek" type="b2602c69:ProjectViewProjectNode" />
               <item name="home-seek" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="home-seek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="home-seek" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="home-seek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="home-seek" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="blessed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="home-seek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="home-seek" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="blessed" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="home-seek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="home-seek" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="blessed" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="home-seek" type="b2602c69:ProjectViewProjectNode" />
@@ -268,7 +305,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.Unnamed">
-    <configuration name="Unnamed" type="NodeJSConfigurationType" factoryName="Node.js" application-parameters="-u https://www.daft.ie/dublin-city/residential-property-for-rent/blackrock,cabinteely,carpenterstown,carrickmines,churchtown,dalkey,deans-grange,donnybrook,dun-laoghaire,dundrum,foxrock,goatstown,killiney,leopardstown,monkstown,sandycove,sandyford,stepaside,stillorgan/?mxp=2000&amp;mnb=2&amp;mnbt=2&amp;advanced=1&amp;cc_id=ct1&amp;a_id%5B0%5D=188&amp;a_id%5B1%5D=194&amp;a_id%5B2%5D=196&amp;a_id%5B3%5D=197&amp;a_id%5B4%5D=201&amp;a_id%5B5%5D=212&amp;a_id%5B6%5D=214&amp;a_id%5B7%5D=218&amp;a_id%5B8%5D=222&amp;a_id%5B9%5D=224&amp;a_id%5B10%5D=231&amp;a_id%5B11%5D=236&amp;a_id%5B12%5D=249&amp;a_id%5B13%5D=258&amp;a_id%5B14%5D=265&amp;a_id%5B15%5D=287&amp;a_id%5B16%5D=288&amp;a_id%5B17%5D=292&amp;a_id%5B18%5D=293&amp;ignored_agents%5B0%5D=1551&amp;s%5Bmxp%5D=2000&amp;s%5Bmnb%5D=2&amp;s%5Bmnbt%5D=2&amp;s%5Badvanced%5D=1&amp;s%5Bignored_agents%5D%5B0%5D=1551&amp;s%5Bsort_by%5D=date&amp;s%5Bsort_type%5D=d&amp;searchSource=rental" path-to-node="$USER_HOME$/.nvm/versions/node/v8.14.1/bin/node" path-to-js-file="bin/run" working-dir="$PROJECT_DIR$">
+    <configuration name="Unnamed" type="NodeJSConfigurationType" factoryName="Node.js" application-parameters="-s -u https://www.daft.ie/dublin-city/residential-property-for-rent/blackrock,cabinteely,carpenterstown,carrickmines,churchtown,dalkey,deans-grange,donnybrook,dun-laoghaire,dundrum,foxrock,goatstown,killiney,leopardstown,monkstown,sandycove,sandyford,stepaside,stillorgan/?mxp=2000&amp;mnb=2&amp;mnbt=2&amp;advanced=1&amp;cc_id=ct1&amp;a_id%5B0%5D=188&amp;a_id%5B1%5D=194&amp;a_id%5B2%5D=196&amp;a_id%5B3%5D=197&amp;a_id%5B4%5D=201&amp;a_id%5B5%5D=212&amp;a_id%5B6%5D=214&amp;a_id%5B7%5D=218&amp;a_id%5B8%5D=222&amp;a_id%5B9%5D=224&amp;a_id%5B10%5D=231&amp;a_id%5B11%5D=236&amp;a_id%5B12%5D=249&amp;a_id%5B13%5D=258&amp;a_id%5B14%5D=265&amp;a_id%5B15%5D=287&amp;a_id%5B16%5D=288&amp;a_id%5B17%5D=292&amp;a_id%5B18%5D=293&amp;ignored_agents%5B0%5D=1551&amp;s%5Bmxp%5D=2000&amp;s%5Bmnb%5D=2&amp;s%5Bmnbt%5D=2&amp;s%5Badvanced%5D=1&amp;s%5Bignored_agents%5D%5B0%5D=1551&amp;s%5Bsort_by%5D=date&amp;s%5Bsort_type%5D=d&amp;searchSource=rental" path-to-node="$USER_HOME$/.nvm/versions/node/v8.14.1/bin/node" path-to-js-file="bin/run" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="run" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
@@ -302,15 +339,15 @@
       <option name="presentableId" value="Default" />
       <updated>1563031250383</updated>
       <workItem from="1563031253047" duration="28045000" />
-      <workItem from="1563145242028" duration="6808000" />
+      <workItem from="1563145242028" duration="12425000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34853000" />
+    <option name="totallyTimeSpent" value="40470000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="819" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="813" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
@@ -319,7 +356,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3287483" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32871014" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39889959" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -328,11 +365,32 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32921812" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3287483" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32871014" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32871014" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39889959" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32921812" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32871014" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -345,21 +403,21 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/view/dashboard.ts</url>
-          <line>146</line>
+          <line>156</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/service/notification.service.ts</url>
-          <line>20</line>
+          <line>13</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="27" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/service/notification.service.ts</url>
-          <line>12</line>
+          <line>24</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -521,39 +579,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/notification.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="288">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/daft.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="53">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/daft.service.ts">
+    <entry file="file://$PROJECT_DIR$/node_modules/blessed/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/blessed/lib/widgets/bigtext.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-379">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-        </state>
+        <state relative-caret-position="-427" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/dashboard.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="217">
+          <caret line="156" column="53" selection-start-line="156" selection-start-column="53" selection-end-line="156" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

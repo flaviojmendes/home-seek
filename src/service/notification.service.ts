@@ -2,6 +2,7 @@ import {DaftHomes} from "../model/daft-home.model";
 const _ = require('underscore');
 const beep = require('beepbeep')
 const openurl = require('openurl')
+const notifier = require('node-notifier');
 
 export class NotificationService {
 
@@ -11,7 +12,19 @@ export class NotificationService {
 
 
     if(!_.isEqual(prev, current)) {
-      beep(2);
+
+
+      notifier.notify(
+        {
+          title: 'Home Seek',
+          message: 'There is a new home!!!',
+          sound: true,
+          wait: true
+        },
+        function(err:any, response:any) {
+          beep(2);
+        }
+      );
       this.openNewHomes(prev, current);
     }
 
@@ -23,11 +36,8 @@ export class NotificationService {
         prev.homes.forEach(homePrev => {
           if(homePrev.id === homeCur.id) {
             hasHome = true;
-            return;
           }
-
-
-        })
+        });
 
         if(!hasHome) openurl.open(homeCur.url);
 
