@@ -9,11 +9,7 @@ export class NotificationService {
 
   static notifyNewHome(prev:DaftHomes, current:DaftHomes) {
 
-
-
     if(!_.isEqual(prev, current)) {
-
-
       notifier.notify(
         {
           title: 'Home Seek',
@@ -26,7 +22,10 @@ export class NotificationService {
         }
       );
       this.openNewHomes(prev, current);
+      return true;
     }
+
+    return false;
 
   }
 
