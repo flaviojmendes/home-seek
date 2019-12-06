@@ -1,11 +1,14 @@
 import {DaftHome, DaftHomes} from "../model/daft-home.model";
 
-const rp = require('request-promise')
-const $ = require('cheerio')
+const rp = require('request-promise');
+const $ = require('cheerio');
 
 export class DaftService {
 
-  BASE_URL = 'https://www.daft.ie'
+  BASE_URL = 'https://www.daft.ie';
+
+  description:string = '';
+
   async getHomes(searchUrl: string) {
 
     let homes: DaftHome[] = [];
@@ -22,11 +25,8 @@ export class DaftService {
       offset = homes.length;
     }
 
-    let html = await rp(searchUrl+ '&offset=0')
-    let description = await $('#search_sentence > h1', html).text().trim().replace(/ +(?= )/g, '');
-
     let daftHomes: DaftHomes = {
-      description: description,
+      description: this.description,
       homes: homes
     }
 
@@ -37,7 +37,23 @@ export class DaftService {
   private async getHomesByOffset(searchUrl: string, offset:number) {
     let homesByOffset: DaftHome[] = [];
 
-    let html = await rp(searchUrl+ '&offset=' + offset)
+    let html;
+    try {
+      const HTTP_PROXY = process.env.HTTP_PROXY || process.env.http_proxy;
+      let proxiedRequest = HTTP_PROXY ?
+        rp.defaults({ proxy: HTTP_PROXY, strictSSL: false }) :
+        rp.defaults({ strictSSL: false });
+      html = await proxiedRequest.get(searchUrl + '&offset=' + offset);
+
+      this.description = offset == 0 ?
+        await $('#search_sentence > h1', html).text().trim().replace(/ +(?= )/g, '') :
+        this.description;
+
+      // html = await rp(searchUrl + '&offset=' + offset);
+    } catch(e) {
+      console.log(e);
+    }
+
     let jsonHtml = await $('#sr_content > tbody > tr > td:nth-child(1)', html)
 
     if(!jsonHtml[0]) return homesByOffset;

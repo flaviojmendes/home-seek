@@ -9,7 +9,7 @@ export class NotificationService {
 
   static notifyNewHome(prev:DaftHomes, current:DaftHomes) {
 
-    if(!_.isEqual(prev, current)) {
+    if(_.isEqual(prev, current)) {
       notifier.notify(
         {
           title: 'Home Seek',
