@@ -62,9 +62,9 @@ export class DaftService {
 
     children.forEach((child: any) => {
       if (child.type === 'tag' && this.isBox(child)) {
-        let title = $('div.search_result_title_box > h2 > a', child).text().trim().replace(/ +(?= )/g, '');
-        let url = this.BASE_URL + $('div.search_result_title_box > h2 > a', child).attr('href');
-        let price = $('div.text-block > div.info-box > strong', child).text().trim().split(' ')[0];
+        let title = $('div > div.PropertyInformationCommonStyles__addressCopy.calculate-truncation-plugin > a', child).text().trim().replace(/ +(?= )/g, '');
+        let url = this.BASE_URL + $('div > div.PropertyInformationCommonStyles__addressCopy.calculate-truncation-plugin > a', child).attr('href');
+        let price = $('div > div.PropertyInformationCommonStyles__propertyPrice > a > strong', child).text().trim().split(' ')[0];
         let home: DaftHome = {id: Buffer.from(title).toString('base64'), title: title, price: price, url: url};
         homesByOffset.push(home);
       }
@@ -74,7 +74,7 @@ export class DaftService {
   }
 
   isBox(child:any) {
-    if(child.attribs && child.attribs.class && child.attribs.class.includes('box')) {
+    if(child.attribs && child.attribs.class && child.attribs.class.includes('PropertyCardContainer__container')) {
       return true
     }
   }
