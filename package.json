@@ -1,7 +1,7 @@
 {
   "name": "home-seek",
   "description": "This app is used to poll and alert if a new Home appears in daft.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": " @flaviojmendes",
   "bin": {
     "home-seek": "./bin/run"
